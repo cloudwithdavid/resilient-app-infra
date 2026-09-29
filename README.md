@@ -8,7 +8,7 @@ This project designs and implements a resilient AWS application infrastructure t
 
 The system is developed across three engineering layers:
 
-1. **Infrastructure & IaC** — networking, compute, database, security, and Terraform
+1. **Infrastructure / IaC** — networking, compute, database, security, and Terraform
 2. **Operations & Observability** — monitoring, logging, alarms, scaling, failure testing, and recovery
 3. **Controlled Delivery** — GitHub Actions (CI/CD), Terraform validation/planning, OIDC authentication, approval gates, and reproducible deployment
 
