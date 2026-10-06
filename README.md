@@ -14,23 +14,9 @@ The system is developed across three engineering layers:
 
 ## Architecture
 
-```mermaid
-flowchart TD
-    Internet --> ALB[Application Load Balancer]
+Planned architecture. Implementation and validation are in progress.
 
-    subgraph AWS["AWS VPC — 2 Availability Zones"]
-        ALB --> ASG[EC2 Auto Scaling Group]
-        ASG --> EC2A[EC2 — AZ A]
-        ASG --> EC2B[EC2 — AZ B]
-        EC2A --> RDS[(Amazon RDS)]
-        EC2B --> RDS
-    end
-
-    SSM[AWS Systems Manager] -. administration .-> ASG
-    CW[Amazon CloudWatch] -. metrics / logs / alarms .-> ASG
-    CW -. monitoring .-> ALB
-    CW -. monitoring .-> RDS
-```
+![Planned AWS architecture](docs/architecture.svg)
 
 - VPC spanning two Availability Zones
 - Public subnets for the Application Load Balancer and NAT
@@ -55,7 +41,7 @@ The project is designed to validate:
 - Isolating application and database workloads from direct public access
 - Maintaining and scaling compute capacity automatically
 - Observing infrastructure and application behavior
-- Deliberately introducing failures and verifying recovery
+- Troubleshooting failures and verifying recovery
 - Reasoning about resilience, security, cost, and production tradeoffs
 - Delivering infrastructure changes through a controlled CI/CD process
 - Destroying and reproducibly rebuilding the environment
