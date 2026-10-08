@@ -2,8 +2,6 @@
 
 A multi-AZ AWS application environment provisioned with Terraform, operated with observability and failure testing, and delivered through controlled CI/CD.
 
-## Overview
-
 This project designs and implements a resilient AWS application infrastructure that can be reproducibly deployed, securely administered, observed, failure-tested, scaled, and destroyed/rebuilt for cost control.
 
 The system is developed across three engineering layers:
@@ -12,14 +10,14 @@ The system is developed across three engineering layers:
 2. **Operations & Observability** — monitoring, logging, alarms, scaling, failure testing, and recovery
 3. **Controlled Delivery** — GitHub Actions (CI/CD), Terraform validation/planning, OIDC authentication, approval gates, and reproducible deployment
 
-## Architecture
+---
 
-Planned architecture. Implementation and validation are in progress.
+**Target production architecture.** The portfolio implementation uses selected cost optimizations documented in DECISIONS.md.
 
-![Planned AWS architecture](docs/architecture.svg)
+![Target architecture](assets/architecture.svg)
 
 - VPC spanning two Availability Zones
-- Public subnets for the Application Load Balancer and NAT
+- Public subnets for the Application Load Balancer and NAT Gateways
 - Private application subnets for EC2
 - Private database subnets for Amazon RDS
 - EC2 Auto Scaling Group across multiple Availability Zones
