@@ -1,14 +1,12 @@
-# Resilient Application Infrastructure Engineering on AWS
+# Resilient Application Infrastructure
 
-A multi-AZ AWS application environment provisioned with Terraform, operated with observability and failure testing, and delivered through controlled CI/CD.
+A highly available, elastic AWS web tier backed by secure, multi-tier infrastructure, provisioned with Terraform and operated through observability, automated recovery, and delivered through controlled CI/CD.
 
-This project designs and implements a resilient AWS application infrastructure that can be reproducibly deployed, securely administered, observed, failure-tested, scaled, and destroyed/rebuilt for cost control.
+This project designs and implements resilient AWS application infrastructure that can be reproducibly deployed, securely administered, monitored, scaled, recovered from failures, and destroyed/rebuilt for cost control.
 
-The system is developed across three engineering layers:
-
-1. **Infrastructure / IaC** — networking, compute, database, security, and Terraform
-2. **Operations & Observability** — monitoring, logging, alarms, scaling, failure testing, and recovery
-3. **Controlled Delivery** — GitHub Actions (CI/CD), Terraform validation/planning, OIDC authentication, approval gates, and reproducible deployment
+1. **Infrastructure / IaC** — Multi-AZ networking and compute, load balancing, Auto Scaling, private database infrastructure, IAM security, and Terraform.
+2. **Operations & Observability** — Centralized logging, metrics, alarms, health checks, scaling behavior, failure injection, and recovery validation.
+3. **Controlled Delivery** — GitHub Actions CI/CD, Terraform validation and planning, OIDC authentication, deployment approvals, and reproducible infrastructure lifecycle management.
 
 ---
 
